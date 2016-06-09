@@ -1,0 +1,124 @@
+.hover{
+	display: inline-block;
+	height: 52px;
+}
+#user2{
+	background-color: #1be4b3;
+	width: 55px;
+}
+.banner{
+	height: 400px;
+	background: url(../images/OS-banner.png) no-repeat;
+	background-size: 100%;
+}
+.context{
+	font-family: "微软雅黑",sans-serif;
+	color: #474747;
+	font-size: 16px;
+	width: 715px;
+	margin: 20px auto;
+}
+.context-order hr{
+	width: 100%;
+	border-bottom:2px solid #d2d2d2;
+	margin-top: 15px;
+	margin-bottom: 33px;
+}
+.tit{
+	color: #1be4b3;
+	background: url(../images/OS-user.png) no-repeat;
+	height: 14px;
+	padding: 0px 0px 0px 18px;
+}
+#oo{
+	background: url(../images/OS-phone.png) no-repeat;
+	height: 13px;
+}
+#bang{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+#adjust{
+	margin-left: 20px;
+}
+.form input{
+	width: 295px;
+	height: 45px;
+	padding: 7px 0px 0px 15px;
+	position: relative;
+	left: 5px;
+}
+.context-order .selected{
+	width: 298px;
+	height: 45px;
+	opacity: 0.9;
+	border: 1px solid #d2d2d2;
+	border-radius: 5px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+}
+.form{
+	margin-top: 15px;
+	background-color: #f8f8f8;
+	border: 1px solid #d2d2d2;
+	text-align: center;
+}
+#head{
+	margin-top: 18px;
+}
+.form p{
+	margin-bottom: 12px;
+}
+form{
+	padding-left: 10px;
+	width: 455px;
+}
+.form input{
+	width: 295px;
+	height: 35px;
+	line-height: 35px;
+	border: 1px solid #d2d2d2;
+	border-radius: 5px;
+	color: #6a6a6a;
+	text-indent: 10px;
+
+}
+input[type="submit"]{
+	display: block;
+	width: 150px;
+	height: 50px;
+	background-color: #1be4b3;
+	border: 1px solid #d2d2d2;
+	border-radius: 5px;
+	color: #fff;
+	line-height: 50px;
+	text-align: center;
+	font-size: 22px;
+	margin: 50px auto;
+}
+#error{
+	font-size: 12px;
+	font-family: 宋体,serif;
+	color: #6a6a6a;
+	position: relative;
+	left: 550px;
+	top: -360px;
+	text-decoration: underline;
+}
+.context-contact a{
+	color: #1be4b3;
+	margin-left: 25px;
+}
+.tit2{
+	background: url(../images/OS-mail.png) no-repeat;
+	padding-left: 25px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+#t1{
+	background-position: 0px 3px;
+}
+#t2{
+	background: url(../images/OS-phone2.png) no-repeat;
+	margin-bottom: 108px;
+}

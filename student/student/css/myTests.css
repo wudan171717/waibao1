@@ -1,0 +1,115 @@
+﻿*{
+	margin: 0px;
+	border: 0px;
+}
+
+
+.banner{
+	height: 426px;
+	background: url(../images/MT-banner.jpg) no-repeat top center;
+    text-align: center;
+
+}
+.context{
+	font-family: “微软雅黑”,sans-serif;
+	color: #303030;
+	height: 473px;
+padding-top: 50px;
+
+}
+
+
+.subject{
+	float: left;
+	margin-left:30px;
+}
+
+
+.wrapper_l{
+	width: 800px;
+	height: 130px;
+	border: 1px solid #d2d2d2;
+	margin: 20px auto;
+
+}
+.wrapper_l img{
+	margin: 8px;
+	float: left;
+}
+.text{
+	float: left;
+	width: 400px;
+}
+.text ul,.text li{
+	display: block;
+}
+.text p{
+	font-family:"微软雅黑" ;
+	font-size: 18px;
+	color:#303030;
+	line-height: 60px;
+}
+.text li{
+	font-family:"微软雅黑" ;
+	font-size: 14px;
+	color:#303030;
+	line-height: 20px;
+}
+.more{
+	float: left;
+	margin-left: 100px;
+	margin-top: 95px;
+}
+.more a{
+	border: 1px solid #999999;
+	padding: 5px 10px;
+	border-radius: 6px;
+	text-decoration: none;
+	font-size:12px;
+	font-family:"宋体";
+	color: #454545;
+}
+.more a:hover {
+	background-color:#1be4b3;
+	color:#ffffff;
+	border: 0;
+}
+.mar{
+	margin-bottom: 100px;
+}
+.marginleft{
+	margin-left:30px;
+}
+p.mytest{
+	font-size:14px;
+	border-bottom: 1px solid #474747;
+	padding-bottom: 8px;
+	font-family:'微软雅黑';
+}
+.button{
+	border: 1px solid #dcdcdc;
+}
+.mytest a{
+	color:black;
+	text-decoration:none;
+}
+.mytest a:hover{
+	color:#1BE4B8;
+	text-decoration:none;
+}
+.testing{
+	display: block;
+	font-size:16px;
+	font-family:'微软雅黑';
+	padding:20px 48px 20px 20px;
+	background-color:#F5F5F5;
+	color: #474747;
+}
+.testing .active{
+	background-color:#1BD9AA;
+	color: #FFF;
+}
+.testing:hover{
+	background-color:#1BD9AA;
+	color: #FFF;
+}
