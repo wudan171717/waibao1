@@ -2,29 +2,27 @@ package controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import service.UserService;
+import service.AppointService;
 
 @Controller
 @RequestMapping()
 public class AppointController {
 	@Resource//请求spring注入资源userService
-	private UserService userService;
+	private AppointService appointService;
 	
-	@RequestMapping("/apoint-action.form")
+	@RequestMapping("/appoint-action.form")
 	public String Register(HttpServletRequest req) {
-		String gender=req.getParameter("gender");
-		System.out.println(gender);
-		int number=Integer.parseInt(req.getParameter("number"));
-		String major=req.getParameter("major");
-		int classes=Integer.parseInt(req.getParameter("classes")) ;
-		String email=req.getParameter("email");
-		int photo=Integer.parseInt(req.getParameter("photo")) ;
+		String content=req.getParameter("content");
+		HttpSession session=req.getSession();
+		String usename=session.getAttribute("usename").toString();
+		String name=session.getAttribute("name").toString();
 		try {
-			userService.appoint(gender, number,major,classes,email,photo);
+			appointService.appoint(content,usename,name);
 			return "redirect:/jsp/onlineService.jsp";
 		} 
 		catch (RuntimeException e){

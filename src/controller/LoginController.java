@@ -2,11 +2,9 @@ package controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 import entity.User;
 import service.NameOrPwdException;
@@ -38,7 +36,6 @@ public class LoginController{
      	String pwd=req.getParameter("pwd");
 		try {
 			User user=userService.login(username, pwd);
-			System.out.println(user);
 			req.getSession().setAttribute("name", user.getName());
 			req.getSession().setAttribute("usename", user.getUsername());
 			req.getSession().setAttribute("pwd", user.getPwd());

@@ -7,15 +7,6 @@ if(name==null){
    response.sendRedirect("login.jsp");
    return;
 }
-Object number=session.getAttribute("usename");
-Object pwd=session.getAttribute("pwd");
-Object photo=session.getAttribute("photo");
-Object classes=session.getAttribute("classes");
-Object major=session.getAttribute("major");
-Object email=session.getAttribute("email");
-Object grade=session.getAttribute("grade");
-Object gender=session.getAttribute("gender");
-Object phone=session.getAttribute("phone");
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -42,47 +33,36 @@ Object phone=session.getAttribute("phone");
 	<div class="wrapper">
 		<a class="pull-left" href=""><img src="./images/logo.gif" alt=""/></a>
 			<ul class="nav pull-left">
-				<li><a href="course.html" target="_self"><img src="./images/book.gif" ><span>我的课程</span></a></li><!--
-				--><li><a href="myTests.html" target="_self"><img src="./images/test.gif"  alt=""><span>我的考试</span></a></li><!--
-				--><li><a href="active.html" target="_self"><img src="./images/active.gif" alt=""><span>我的活动</span></a></li><!--
-				--><li><a href="teacherCard.html" target="_self"><img src="./images/card.gif" alt=""><span>教工名片</span></a></li><!--
-				--><li class="active"><a href="onlineService.html" target="_self"><img src="./images/service.gif" alt=""><span>在线服务</span></a></li>
+				<li><a href="./jsp/course.jsp" target="_self"><img src="./images/book.gif" ><span>我的课程</span></a></li><!--
+				--><li><a href="./jsp/myTests.jsp" target="_self"><img src="./images/test.gif"  alt=""><span>我的考试</span></a></li><!--
+				--><li><a href="./jsp/active.jsp" target="_self"><img src="./images/active.gif" alt=""><span>我的活动</span></a></li><!--
+				--><li><a href="${base}teacherCardFindAll-action.form" target="_self"><img src="./images/card.gif" alt=""><span>教工名片</span></a></li><!--
+				--><li class="active"><a href="./jsp/onlineService.jsp" target="_self"><img src="./images/service.gif" alt=""><span>在线服务</span></a></li>
 			</ul>
 			<ul class="message">
-				<li><a href=""><img src="./images/link.gif" alt=""></a></li><!--
-				--><li><a href="message.html" target="_self"><img src="./images/bell.gif" alt=""></a></li><!--
-				--><li><a href=""><img src="./images/message.gif" alt=""></a></li>
+				<li><a href="../jsp/"><img src="./images/link.gif" alt=""></a></li><!--
+				--><li><a href="../jsp/message.jsp" target="_self"><img src="./images/bell.gif" alt=""></a></li><!--
+				--><li><a href="../jsp/"><img src="./images/message.gif" alt=""></a></li>
 			</ul>
 		<ul class="user pull-right">
 		<li>
 		<img src="./images/people.png" alt="">
-		<a href="personalCenter.html" target="_self"><span><%=name.toString() %></span></a>
+		<a href="../jsp/personalCenter.jsp" target="_self"><span><%=name.toString() %></span></a>
 		</li>
-			<li><a href="${base}loginout.form" target="_self"><span>退出</span></a></li>
+			<a href="${base}loginout.form" target="_self"><span>退出</span></a>
 		</ul>
 	</div>
 </div>
 	<div class="banner"></div>
 	<div class="context">
 		<div class="context-order">
-			<p class="tit" id="oo">在线预约</p>
+			<p class="tit" id="oo">联系服务站</p>
 			<hr/>
-			<p id="adjust">选择预约项目：<select class="selected">
-				<option selected="selected">&nbsp&nbsp简历修改</option>
-			</select></p>
-			<p id="adjust">请您填写表格：</p>
-			<form action="${base}apoint-action.form" method="post">
-			<div class="form"  >
-				<p id="head">性别：<input type="text" name="gender" value="<%=gender.toString() %>"></p>
-				<p>学号：<input type="text" name="number" value="<%=Integer.parseInt(number.toString())%>"></p>
-				<p>学院：<input type="text" name="major" value="<%=major.toString() %>"></p>
-				<p>班级：<input type="text" name="classes" value="<%=Integer.parseInt(classes.toString())%>"></p>
-				<p>手机：<input type="text" name="photo" placeholder="请输入手机号"></p>
-				<p>邮箱：<input type="text" name="email" value="<%=email.toString() %>"></p>
-			</div>
+			<h5>遇到问题，请联系我们！</h5>
+			<form class="form" action="${base}appoint-action.form" method="post">
+			    <textarea placeholder="请输入联系内容" style="padding: 10px;" name="content"></textarea>
 				<input type="submit" value="提交"></input>
 			</form>
-			
 		</div>
 		<div class="context-contact">
 			<p class="tit">联系我们</p>

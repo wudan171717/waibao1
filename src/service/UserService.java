@@ -1,7 +1,6 @@
 package service;
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.annotation.Resource;
 
@@ -18,7 +17,7 @@ public class UserService implements Serializable{
 		return userDao;
 	}
 @Resource//自动匹配userDao对象并注入
-	public void setNewsDAO(UserDAO userDao) {
+	public void setUserDAO(UserDAO userDao) {
 		this.userDao = userDao;
 	}
 

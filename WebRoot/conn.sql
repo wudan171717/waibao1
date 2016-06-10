@@ -1,0 +1,1 @@
+select * from jiaogong where tname='одеТ'
