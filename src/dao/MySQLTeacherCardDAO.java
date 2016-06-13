@@ -71,15 +71,27 @@ public class MySQLTeacherCardDAO implements Serializable, TeacherCardDAO {
 	public List<Teacher> findTeacherByCondition(Teacher teacher) {
 		List<Teacher> teachers=new ArrayList<Teacher>();
 		String sql1 = "select * from jiaogong where position=?";
-		String sql2 = "select * from jiaogong where position=? and firstname=?";
+		String sql2 = "select * from jiaogong where firstname=?";
+		String sql3 = "select * from jiaogong where position=? and firstname=?";
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs=null;
 		String position= teacher.getPosition();
+		String firstname= teacher.getFirstname();
 		try {
 			conn = dataSource.getConnection();
-			pstmt = conn.prepareStatement(sql1);
-			pstmt.setString(1, position);
+			if(firstname==null&&position!=null){
+				pstmt = conn.prepareStatement(sql1);
+				pstmt.setString(1, position);
+			}
+			else if (firstname!=null&&position==null) {
+				pstmt = conn.prepareStatement(sql2);
+				pstmt.setString(1, firstname);
+			}else if (firstname!=null&&position!=null) {
+				pstmt = conn.prepareStatement(sql2);
+				pstmt.setString(1, position);
+				pstmt.setString(2, firstname);
+			}
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				teacher = new Teacher();

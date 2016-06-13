@@ -38,8 +38,10 @@ public class TeacherCardController {
 	@RequestMapping("/teacherCardByCondition-action.form")
 	public String teacherCardByCondition(HttpServletRequest req) {
 		String position=req.getParameter("postion");
+		String firstname=req.getParameter("firstname");
 		Teacher teacher=new Teacher();
 		teacher.setPosition(position);
+		teacher.setFirstname(firstname);
 		try {
 			List <Teacher> teachers=teacherCardService.findTeacherByCondition(teacher);
 			req.getSession().setAttribute("teachers", teachers);
@@ -56,7 +58,6 @@ public class TeacherCardController {
 	public String teacherCardFindAll(HttpServletRequest req) {
 		try {
 			List <Teacher> teachers=teacherCardService.findAllTeacher();
-			System.out.println(teachers);
 			req.getSession().setAttribute("teachers", teachers);
 			return "redirect:/jsp/teacherCard.jsp";
 		} 

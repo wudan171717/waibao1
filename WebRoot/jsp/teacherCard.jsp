@@ -44,10 +44,10 @@ Object teachers=session.getAttribute("teachers");
 	<div class="wrapper">
 		<a class="pull-left" href=""><img src="./images/logo.gif" alt=""/></a>
 				<ul class="nav pull-left">
-				<li><a href="./jsp/course.jsp" target="_self"><img src="./images/book.gif" ><span>我的课程</span></a></li><!--
-				--><li><a href="./jsp/myTests.jsp" target="_self"><img src="./images/test.gif"  alt=""><span>我的考试</span></a></li><!--
-				--><li><a href="./jsp/active.jsp" target="_self"><img src="./images/active.gif" alt=""><span>我的活动</span></a></li><!--
-				--><li  class="active"><a href="./jsp/teacherCard.jsp" target="_self"><img src="./images/card.gif" alt=""><span>教工名片</span></a></li><!--
+				<li><a href="course.html" target="_self"><img src="./images/book.gif" ><span>我的课程</span></a></li><!--
+				--><li><a href="${base}examFindByTeacher-action.form" target="_self"><img src="./images/test.gif"  alt=""><span>我的考试</span></a></li><!--
+				--><li><a href="${base}activeFindAll-action.form" target="_self"><img src="./images/active.gif" alt=""><span>我的活动</span></a></li><!--
+				--><li><a href="${base}teacherCardFindAll-action.form" target="_self"><img src="./images/card.gif" alt=""><span>教工名片</span></a></li><!--
 				--><li><a href="./jsp/onlineService.jsp" target="_self"><img src="./images/service.gif" alt=""><span>在线服务</span></a></li>
 			</ul>
 			<ul class="message">
